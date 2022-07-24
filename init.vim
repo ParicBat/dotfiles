@@ -15,7 +15,7 @@ colorscheme onedark
 
 lua << END
 require('lualine').setup()
-requite('nvim-tree').setup()
+require('nvim-tree').setup()
 END
 
 set number
