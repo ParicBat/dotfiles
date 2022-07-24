@@ -1,13 +1,18 @@
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'itchyny/lightline.vim'
+Plug 'navarasu/onedark.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 call plug#end()
 
-syntax on
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+let g:onedark_config = {
+            \ 'style': 'warmer',
+            \}
+colorscheme onedark
+
+luafile nvim-tree-init.lua
 
 set number
 
