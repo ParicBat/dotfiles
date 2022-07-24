@@ -2,8 +2,9 @@ call plug#begin()
 
 Plug 'itchyny/lightline.vim'
 Plug 'navarasu/onedark.nvim'
-Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
 
@@ -12,7 +13,10 @@ let g:onedark_config = {
             \}
 colorscheme onedark
 
-luafile nvim-tree-init.lua
+lua << END
+require('lualine').setup()
+requite('nvim-tree').setup()
+END
 
 set number
 
